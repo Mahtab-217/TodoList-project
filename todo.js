@@ -5,6 +5,7 @@ const saveBtn = document.getElementById("addTodo");
 const containerForm=document.getElementById("container");
 const todoList=[];
 
+
 addBtn.addEventListener("click",()=>{
 if(containerForm.classList.contains("hidden")){
     containerForm.classList.remove("hidden");
@@ -14,4 +15,10 @@ else{
        containerForm.classList.remove("flex");
     containerForm.classList.add("hidden");
 }
-})
+});
+saveBtn.addEventListener("click",()=>{
+
+});
+function saveTodo(){
+    
+}
