@@ -4,8 +4,8 @@ const containerForm=document.getElementById("container");
 const todoList=[];
 
 
-addBtn.addEventListener("click",(e)=>{
-    e.preventDefault();
+addBtn.addEventListener("click",(event)=>{
+ event.preventDefault();
     saveTodo();
 if(containerForm.classList.contains("hidden")){
     containerForm.classList.remove("hidden");
@@ -22,10 +22,17 @@ saveBtn.addEventListener("click",()=>{
 function saveTodo(){
     const todo=document.getElementById("todo").value;
 const order=document.getElementById("order").value;
+if(todo!==""){
+ 
+
     const saveTodo={
         myTodo:todo,
        importence:order,
 
     }
     todoList.push(saveTodo);
+}
+else{
+    
+}
 }
