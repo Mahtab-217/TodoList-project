@@ -1,16 +1,19 @@
 const addBtn=document.getElementById("addBtn");
 const saveBtn = document.getElementById("addTodo");
 const containerForm=document.getElementById("container");
+const error=document.getElementById("error")
 const todoList=[];
 let message="";
 
 addBtn.addEventListener("click",(event)=>{
+    const h1=document.createElement("h1")
  event.preventDefault();
     saveTodo();
-
+     h1.innerHTML="";
     if(message>0){
     document.createElement("h1");
     h1.textContent=message;
+    error.appendChild(h1);
 }
 
 if(containerForm.classList.contains("hidden")){
@@ -37,6 +40,7 @@ if(todo!==""){
 
     }
     todoList.push(saveTodo);
+    message="";
 }
 else{
     message="لطفا پلان امروز را اضافه کنید"
