@@ -2,11 +2,17 @@ const addBtn=document.getElementById("addBtn");
 const saveBtn = document.getElementById("addTodo");
 const containerForm=document.getElementById("container");
 const todoList=[];
-
+let message="";
 
 addBtn.addEventListener("click",(event)=>{
  event.preventDefault();
     saveTodo();
+
+    if(message>0){
+    document.createElement("h1");
+    h1.textContent=message;
+}
+
 if(containerForm.classList.contains("hidden")){
     containerForm.classList.remove("hidden");
     containerForm.classList.add("flex");
@@ -33,6 +39,7 @@ if(todo!==""){
     todoList.push(saveTodo);
 }
 else{
-    
+    message="لطفا پلان امروز را اضافه کنید"
 }
 }
+
