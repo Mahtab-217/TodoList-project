@@ -60,8 +60,23 @@ const div= document.createElement("div");
  const h1=document.createElement("h1")
  h1.textContent = todo.myTodo;
  const circle=document.createElement("div");
- circle.classList.add("im");
- circle.classList.add("normal");
- circle.classList.add("optional");
+ if(todo.importence==="important"){
+   circle.classList.add("h-10");
+   circle.classList.add("w-10");
+   circle.classList.add("rounded-full");
+   circle.classList.add("bg-red-700");
+ }
+ else if(todo.importence==="optional"){
+ circle.classList.add("h-10");
+ circle.classList.add("w-10");
+ circle.classList.add("rounded-full");
+ circle.classList.add("bg-green-700");
+ }
+ else{
+ circle.classList.add("h-10");
+ circle.classList.add("w-10");
+ circle.classList.add("bg-blue-700");
+ circle.classList.add("rounded-full");
+ }
  div.append(circle,h1);
 }
