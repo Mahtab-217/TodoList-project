@@ -19,6 +19,10 @@ else{
 saveBtn.addEventListener("click",(event)=>{
 event.preventDefault();
 saveTodo();
+container.innerHTML="";
+todoList.map(todo=>{
+    ShowTodo(todo);
+})
 });
 
 function saveTodo(){
@@ -30,7 +34,7 @@ if(todo!==""){
     const saveTodo={
         myTodo:todo,
        importence:order,
-       completed: false;
+       completed: false,
     }
     todoList.push(saveTodo)
     message="";
@@ -53,5 +57,11 @@ const div= document.createElement("div");
  div.classList.add("border");
  div.classList.add("rounded");
 
- 
+ const h1=document.createElement("h1")
+ h1.textContent = todo.myTodo;
+ const circle=document.createElement("div");
+ circle.classList.add("im");
+ circle.classList.add("normal");
+ circle.classList.add("optional");
+ div.append(circle,h1);
 }
