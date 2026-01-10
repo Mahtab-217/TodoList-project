@@ -2,7 +2,7 @@ const addBtn=document.getElementById("addBtn");
 const error=document.getElementById("error")
 const saveBtn = document.getElementById("addTodo");
 const containerForm=document.getElementById("container");
-// document.getElementById("")
+const container=document.getElementById("todoContainer");
 const todoList=[];
 let message="";
 
@@ -30,6 +30,7 @@ if(todo!==""){
     const saveTodo={
         myTodo:todo,
        importence:order,
+       completed: false;
     }
     todoList.push(saveTodo)
     message="";
@@ -44,5 +45,13 @@ else{
 
 
 function ShowTodo(todo){
-    
+const div= document.createElement("div");
+ container.appendChild(div);
+ div.classList.add("todoContainer");
+ div.classList.add("py-2");
+ div.classList.add("px-5");
+ div.classList.add("border");
+ div.classList.add("rounded");
+
+ 
 }
