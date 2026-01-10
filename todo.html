@@ -12,12 +12,14 @@
 <link href="https://fonts.googleapis.com/css2?family=Sekuya&family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="fixed w-full top-0 left-0 bg-black/50 text-stone-200 py-4 px-12 flex justify-between items-center">
+    <nav class="fixed w-full top-0 left-0 bg-linear-60 from-black/45 to-black/80 text-stone-200 py-4 px-12 flex justify-between items-center">
       <h1 class="text-3xl font-bold text-blue-700">لیست کارهای امروز</h1>
       <button class="py-2 px-4 bg-blue-700 text-stone-100 rounded-md" id="addBtn">افزودن</button>
     </nav>
-    <div class="w-full h-screen  justify-center items-center hidden" id="container">
+       <div id="error" class="bg-red-500 text-white mt-20 text-2xl font-bold py-4  text-center"></div>
+    <div class="w-full h-screen justify-center items-center hidden" id="container">
     <div class="w-9/12 mx-auto ">
+        
         <form class="flex flex-col gap-2 border rounded-xl p-6 " > 
             <input class="border w-full py-2.5 px-2 rounded-xl focus:border-0 focus:ring-indigo-800/20" type="text" id="todo" placeholder="پلان امروز"/>
             <select class="border w-full py-2.5 px-2 rounded-xl" name="" id="order">
@@ -30,6 +32,6 @@
     </div>
     </div>
 
-    <div id="error"></div>
+    <div class=" w-full p-4 flex flex-col items-center gap-3"></div> 
 </body>
 </html>
