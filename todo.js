@@ -52,29 +52,30 @@ function ShowTodo(todo){
 const div= document.createElement("div");
  container.appendChild(div);
  div.classList.add("todoContainer");
- div.classList.add("py-2");
+ div.classList.add("py-3");
  div.classList.add("px-5");
  div.classList.add("border");
- div.classList.add("rounded");
+ div.classList.add("w-9/12");
+ div.classList.add("max-w-4xl");
 
  const h1=document.createElement("h1")
  h1.textContent = todo.myTodo;
  const circle=document.createElement("div");
  if(todo.importence==="important"){
-   circle.classList.add("h-10");
-   circle.classList.add("w-10");
+   circle.classList.add("h-4");
+   circle.classList.add("w-4");
    circle.classList.add("rounded-full");
    circle.classList.add("bg-red-700");
  }
  else if(todo.importence==="optional"){
- circle.classList.add("h-10");
- circle.classList.add("w-10");
+ circle.classList.add("h-4");
+ circle.classList.add("w-4");
  circle.classList.add("rounded-full");
  circle.classList.add("bg-green-700");
  }
  else{
- circle.classList.add("h-10");
- circle.classList.add("w-10");
+ circle.classList.add("h-4");
+ circle.classList.add("w-4");
  circle.classList.add("bg-blue-700");
  circle.classList.add("rounded-full");
  }
