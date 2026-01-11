@@ -22,8 +22,11 @@ saveTodo();
 container.innerHTML="";
 todoList.map(todo=>{
     ShowTodo(todo);
-})
 });
+containerForm.classList.remove("flex");
+containerForm.classList.add("hidden");
+});
+
 
 function saveTodo(){
     error.innerHTML="";
@@ -52,14 +55,23 @@ function ShowTodo(todo){
 const div= document.createElement("div");
  container.appendChild(div);
  div.classList.add("todoContainer");
+ div.addEventListener("click",()=>{
+    todo.completed=!todo.completed;
+    container.innerHTML="";
+    ShowTodo(todo);
+ })
  div.classList.add("py-3");
  div.classList.add("px-5");
  div.classList.add("border");
  div.classList.add("w-9/12");
+ div.classList.add("rounded-md");
  div.classList.add("max-w-4xl");
 
  const h1=document.createElement("h1")
  h1.textContent = todo.myTodo;
+ if(todo.completed){
+    h1.classList.add("line-through");
+ }
  const circle=document.createElement("div");
  if(todo.importence==="important"){
    circle.classList.add("h-4");
