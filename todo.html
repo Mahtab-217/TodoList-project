@@ -6,20 +6,19 @@
     <title>Todo List</title>
      <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
      <script src="todo.js" defer></script>
-
      <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sekuya&family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <nav class="fixed w-full top-0 left-0 bg-linear-60 from-black/45 to-black/80 text-stone-200 py-4 px-12 flex justify-between items-center">
-      <h1 class="text-3xl font-bold text-blue-700">لیست کارهای امروز</h1>
-      <button class="py-2 px-4 bg-blue-700 text-stone-100 rounded-md" id="addBtn">افزودن</button>
+    <nav class="fixed w-full top-0 left-0 bg-linear-60 from-blue-600 to-blue-800 via-blue-500 text-stone-200 py-4 px-12 flex justify-between items-center">
+      <h1 class="text-3xl font-bold text-gray-200">لیست کارهای روزانه</h1>
+      <button class="py-2 px-4 bg-white text-black rounded-md" id="addBtn">افزودن</button>
     </nav>
-       <div id="error" class="bg-red-500 text-white mt-20 text-2xl font-bold   text-center"></div>
+       <div id="error" class="bg-red-500 text-white mt-20 text-2xl font-bold w-fit   text-center"></div>
     <div class="w-full h-screen justify-center items-center hidden" id="container">
     <div class="w-9/12 mx-auto ">
-        
+        <h1 class="bg-linear-60 from-blue-600 to-blue-800 via-blue-500 text-white py-2 mb-1 w-full rounded-md text-center text-2xl">فورم اضافه کردن پلان های روزمره</h1>
         <form class="flex flex-col gap-2 border rounded-xl p-6 " > 
             <input class="border w-full py-2.5 px-2 rounded-xl focus:border-0 focus:ring-indigo-800/20" type="text" id="todo" placeholder="پلان امروز"/>
             <select class="border w-full py-2.5 px-2 rounded-xl" name="" id="order">
@@ -27,7 +26,7 @@
                 <option class="checked:text-gray-20- checked-blue-500" value="medicure">متوسط</option>
                 <option class="checked:text-gray-20- checked-blue-500" value="optional">اختیاری</option>
             </select>
-            <button class="py-2 px-5 bg-blue-700 text-stone-100 rounded-xl" id="addTodo">اضافه کردن</button>
+            <button class="py-2 px-5 bg-linear-60 from-blue-600 to-blue-800 via-blue-500 text-stone-100 rounded-xl" id="addTodo">اضافه کردن</button>
         </form>
     </div>
     </div>

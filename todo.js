@@ -58,7 +58,9 @@ const div= document.createElement("div");
  div.addEventListener("click",()=>{
     todo.completed=!todo.completed;
     container.innerHTML="";
-    ShowTodo(todo);
+    todoList.map(todo =>{
+        ShowTodo(todo);
+    })
  })
  div.classList.add("py-3");
  div.classList.add("px-5");
